@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body.contenedor {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#body_principal {
+    flex: 1;
+}
+
+#header_principal {
+    background-color: #b30f0f;
+    padding: 20px;
+    text-align: center;
+}
+#body_principal {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+#footer_principal {
+    background-color: #580a0a;
+    padding: 20px;
+    text-align: center;
+}
