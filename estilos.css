@@ -6,6 +6,9 @@
 
 html, body {
     height: 100%;
+    background-color: #0f1419;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body.contenedor {
@@ -14,22 +17,676 @@ body.contenedor {
     min-height: 100vh;
 }
 
-#body_principal {
-    flex: 1;
+/* Header Navigation */
+.header-nav {
+    background-color: #1a1f2e;
+    padding: 15px 0;
+    border-bottom: 2px solid #e74c3c;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-#header_principal {
-    background-color: #b30f0f;
-    padding: 20px;
-    text-align: center;
+.navegacion {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
 }
+
+.nav-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-item.active {
+    color: #e74c3c;
+}
+
+.nav-item:hover {
+    color: #e74c3c;
+}
+
+/* Body Principal */
 #body_principal {
-    background-color: #ffffff;
+    flex: 1;
+    padding: 30px 15px;
+}
+
+.contenido-grid {
+    flex: 1;
+    padding: 30px 15px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Card Styles */
+.card {
+    background-color: #1a2a4e;
+    border: 1px solid #2d3e5f;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(231, 76, 60, 0.2);
+}
+
+.card-header {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 200px;
+}
+
+.logo-icon {
+    font-size: 60px;
+    color: #e74c3c;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1;
+    margin: 10px 0;
+}
+
+.logo-lmcp {
+    font-size: 28px;
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.card-body {
     padding: 20px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #b0bec5;
+}
+
+.card-actions {
+    padding: 0 20px 20px;
     text-align: center;
 }
+
+.card-link {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid #e74c3c;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.card-link:hover {
+    background-color: rgba(231, 76, 60, 0.2);
+}
+
+.card-title {
+    padding: 15px 20px;
+    background-color: #0f1419;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Jugadores */
+.jugadores-grid {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.jugador {
+    text-align: center;
+    font-size: 11px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Roles */
+.roles-grid {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.rol {
+    text-align: center;
+    font-size: 11px;
+}
+
+.rol-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #2d3e5f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    border: 2px solid #e74c3c;
+}
+
+/* Estadísticas */
+.estadisticas {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.stat-box {
+    font-size: 11px;
+}
+
+.stat-box h4 {
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 11px;
+}
+
+.stat-bar {
+    color: #e74c3c;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+/* Card Contacto */
+.card-contacto {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.card-contacto .card-title {
+    color: #fff;
+}
+
+.card-contacto .card-link {
+    border-color: #fff;
+}
+
+.card-contacto .card-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logo-lmcp-footer {
+    padding: 20px 20px 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.contacto-links {
+    padding: 10px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contacto-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.contacto-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Footer */
 #footer_principal {
-    background-color: #580a0a;
+    background-color: #0f1419;
     padding: 20px;
     text-align: center;
+    border-top: 2px solid #e74c3c;
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .contenido-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .contenido-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .navegacion {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+body.pagina-seccion {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.pagina {
+    flex: 1;
+    width: 100%;
+    padding: 48px 5vw;
+}
+
+.panel {
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.panel h1 {
+    color: #e74c3c;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-size: 32px;
+}
+
+body.pagina-lmcp {
+    background-color: #223a68;
+    background-image:
+        linear-gradient(120deg, transparent 0 14%, rgba(15, 20, 34, 0.42) 14% 30%, transparent 30% 58%, rgba(15, 20, 34, 0.42) 58% 72%, transparent 72%),
+        linear-gradient(240deg, rgba(18, 32, 62, 0.64), rgba(18, 32, 62, 0.64));
+}
+
+body.pagina-lmcp .pagina {
+    display: flex;
+    align-items: center;
+}
+
+body.pagina-lmcp .lmcp-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4vw;
+    min-height: calc(100vh - 150px);
+}
+
+body.pagina-lmcp .lmcp-columna-texto {
+    max-width: 560px;
+    padding-left: 2vw;
+}
+
+body.pagina-lmcp .lmcp-titulo {
+    color: #ff4e5f;
+    font-size: 68px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+body.pagina-lmcp .lmcp-descripcion {
+    color: #f0f4ff;
+    font-size: 49px;
+    line-height: 1.16;
+    font-weight: 400;
+    text-align: center;
+}
+
+body.pagina-lmcp .lmcp-columna-logo {
+    display: flex;
+    justify-content: center;
+}
+
+body.pagina-lmcp .lmcp-columna-logo svg {
+    width: min(410px, 90%);
+    height: auto;
+    fill: #ff4e5f;
+}
+
+body.pagina-jugadores .jugadores-grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 20px;
+    padding: 0;
+    max-width: 1100px;
+}
+
+body.pagina-jugadores .avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+}
+
+body.pagina-jugadores .jugador {
+    font-size: 12px;
+}
+
+body.pagina-roles {
+    background-color: #223a68;
+    background-image:
+        linear-gradient(120deg, transparent 0 14%, rgba(15, 20, 34, 0.42) 14% 30%, transparent 30% 58%, rgba(15, 20, 34, 0.42) 58% 72%, transparent 72%),
+        linear-gradient(240deg, rgba(18, 32, 62, 0.64), rgba(18, 32, 62, 0.64));
+}
+
+body.pagina-roles .pagina {
+    padding-top: 26px;
+}
+
+body.pagina-roles .roles-layout {
+    width: 100%;
+}
+
+body.pagina-roles .roles-titulo {
+    color: #ff4e5f;
+    letter-spacing: 1px;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+body.pagina-roles .roles-grid-detalle {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px 56px;
+    max-width: 1360px;
+}
+
+body.pagina-roles .rol-bloque {
+    display: grid;
+    grid-template-columns: minmax(170px, 210px) minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+body.pagina-roles .rol-identidad {
+    text-align: center;
+}
+
+body.pagina-roles .rol-sello {
+    width: 98px;
+    height: 98px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    background: #eef2f9;
+    border: 4px solid #121a35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.pagina-roles .rol-sello svg {
+    width: 64px;
+    height: 64px;
+    fill: #0f1430;
+}
+
+body.pagina-roles .rol-identidad h2 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    line-height: 1.1;
+}
+
+body.pagina-roles .rol-bloque p {
+    font-size: 18px;
+    line-height: 1.25;
+    color: #eef3ff;
+    font-weight: 400;
+    margin-top: 2px;
+    text-align: center;
+}
+
+body.pagina-estadisticas .estadisticas {
+    margin-bottom: 20px;
+    padding: 0;
+    max-width: 800px;
+}
+
+body.pagina-estadisticas .stat-box h4 {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+body.pagina-estadisticas .stat-bar {
+    font-size: 14px;
+}
+
+body.pagina-contacto {
+    background-color: #223a68;
+    background-image:
+        linear-gradient(120deg, transparent 0 14%, rgba(15, 20, 34, 0.45) 14% 28%, transparent 28% 56%, rgba(15, 20, 34, 0.45) 56% 70%, transparent 70%),
+        linear-gradient(240deg, rgba(19, 32, 62, 0.65), rgba(19, 32, 62, 0.65));
+}
+
+body.pagina-contacto .pagina {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 28px;
+}
+
+body.pagina-contacto .contacto-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.15fr 0.9fr;
+    gap: 6vw;
+    align-items: center;
+    min-height: calc(100vh - 155px);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+body.pagina-contacto .contacto-columna {
+    max-width: 560px;
+}
+
+body.pagina-contacto .contacto-titulo {
+    color: #ff4e5f;
+    letter-spacing: 1px;
+    margin-bottom: 34px;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+body.pagina-contacto .contacto-lista {
+    list-style: none;
+}
+
+body.pagina-contacto .contacto-lista li {
+    margin-bottom: 22px;
+}
+
+body.pagina-contacto .nombre {
+    display: block;
+    font-size: 31px;
+    line-height: 1.08;
+    margin-bottom: 4px;
+    font-weight: 400;
+}
+
+body.pagina-contacto .correo {
+    display: block;
+    color: #dbe9ff;
+    font-size: 30px;
+    line-height: 1.05;
+    font-weight: 400;
+}
+
+body.pagina-contacto .contacto-card-info {
+    background-color: #c73f4b;
+    border-radius: 16px;
+    padding: 34px 30px;
+    max-width: 520px;
+    justify-self: center;
+}
+
+body.pagina-contacto .contacto-card-info h2 {
+    font-size: 78px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+}
+
+body.pagina-contacto .contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #111a2e;
+    text-decoration: none;
+    font-size: 37px;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+body.pagina-contacto .contacto-item:last-child {
+    margin-bottom: 0;
+}
+
+body.pagina-contacto .icono {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    flex-shrink: 0;
+}
+
+body.pagina-contacto .icono svg {
+    width: 26px;
+    height: 26px;
+    display: block;
+    fill: currentColor;
+}
+
+body.pagina-contacto .icono.mail {
+    border: 3px solid #243a55;
+    color: #243a55;
+}
+
+body.pagina-contacto .icono.instagram {
+    color: #fff;
+    background: radial-gradient(circle at 35% 100%, #fed373 4%, #f15245 30%, #d92e7f 58%, #9b36b7 77%, #515ecf 100%);
+}
+
+.volver {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid #e74c3c;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.volver:hover {
+    background-color: rgba(231, 76, 60, 0.2);
+}
+
+body.pagina-contacto .volver {
+    border-color: #fff;
+}
+
+body.pagina-contacto .volver:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 600px) {
+    .pagina {
+        padding: 32px 20px;
+    }
+
+    .panel h1 {
+        font-size: 26px;
+    }
+
+    body.pagina-jugadores .jugadores-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    body.pagina-roles .roles-titulo {
+        font-size: 30px;
+    }
+
+    body.pagina-lmcp .lmcp-titulo {
+        font-size: 44px;
+    }
+
+    body.pagina-lmcp .lmcp-descripcion {
+        font-size: 29px;
+    }
+}
+
+@media (max-width: 900px) {
+    body.pagina-lmcp .lmcp-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        min-height: auto;
+    }
+
+    body.pagina-lmcp .lmcp-columna-texto {
+        padding-left: 0;
+        max-width: 100%;
+    }
+
+    body.pagina-contacto .contacto-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        min-height: auto;
+    }
+
+    body.pagina-contacto .contacto-card-info {
+        justify-self: center;
+        width: 100%;
+    }
+
+    body.pagina-roles .roles-grid-detalle {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    body.pagina-roles .rol-bloque {
+        grid-template-columns: minmax(150px, 180px) minmax(0, 1fr);
+        gap: 18px;
+    }
 }
